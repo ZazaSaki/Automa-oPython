@@ -1,0 +1,798 @@
+<html class="k-webkit k-webkit77"><head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=IE10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="/assets/mobile_icon.png">
+
+    <meta name="id" value="WS23">
+    <title>Platform</title>
+    <meta name="description" content="">
+
+
+    <link href="/assets/toconline-brand-rus-66c94f1e1ae6f0099d1c1eae8e7e343a.css" media="all" rel="stylesheet" type="text/css">
+    
+
+    <link href="/static/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/assets/cba-third-party-80d2cd81326533d9808457c47339ce3b.js" type="text/javascript"></script>
+    <script src="/assets/cloudware-core-views-platform-fbe66896848c380647935b8c99dbc170.js" type="text/javascript"></script>
+    <script src="/assets/cloudware-business-assets-8a0ee73394123d47f8f16096a6718944.js" type="text/javascript"></script>
+    <script src="/assets/application-ae10fb950ae1c3b676b38fb667d4b96c.js" type="text/javascript"></script>
+    <script src="/assets/platform-application-bd8c7ef9e12042e10d0b96940aa02ed4.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="6pYDFZxVPz9fPCyKIkM32Jy18pdzg4O+hGofC/iqc5A=" name="csrf-token">
+    
+    <script src="/assets/cloudware-core-views-toconline-grid-2da68552416bbaab04131640cdb7f495.js" type="text/javascript"></script>
+
+    <script type="text/javascript" charset="utf-8">
+
+      print_queue = true;
+      if(print_queue){
+        print_role = { css_path: "#accounting_reports_vat_periodic_declaration [role~=download], #reports_reports_show [role~=download], #report-parameters-form [role~=download], #batch_export_sepa, #sepa-download, #as_bcp, #download_tax_report, #export_to_xlsx_button, .background-job-status-modal [role~=download]" }
+      }else{
+        print_role = { css_path: "[role~=download]:not('.cpq-print')" }
+      }
+
+      // var fiscal_years_switcher = new AccountingFiscalYearsSwitch()
+
+      function setLocale() {
+        $.locale = {
+          name: 'pt',
+          formats: {
+            currency: {"delimiter":".","format":"%u %n","negative_format":"-%u %n","precision":2,"separator":",","significant":false,"strip_insignificant_zeros":false,"unit":"\u20ac"}
+          }
+        };
+        // Sets current grid culture in order to correctly represent the localized formats
+        kendo.culture("pt-PT");
+      }
+
+      function setCurrentCompany() {
+        $.current_user = {"full_name":"Andreia Marinho","id":695353,"is_accountant":false,"ticket_bank_account":{"account_type":"DO","accounting_number":null,"card_number":null,"company_id":null,"description":null,"direct_debit":false,"direct_debit_code":null,"entity_id":695353,"entity_type":"User","iban":null,"id":null,"initial_balance":null,"is_connected":false,"name":null,"nib":null,"only_one_payment":null,"sub_type":"ticket_account","swift":null},"bank_account":{"account_type":"DO","accounting_number":null,"card_number":null,"company_id":null,"description":null,"direct_debit":false,"direct_debit_code":null,"entity_id":695353,"entity_type":"User","iban":null,"id":null,"initial_balance":null,"is_connected":false,"name":null,"nib":null,"only_one_payment":null,"sub_type":"main_account","swift":null},"payroll_data":{"christmas_subsidy_independent_receipt":null,"christmas_subsidy_payment_month":null,"christmas_subsidy_twelfths":null,"first_hour_labor_value":null,"first_hour_labor_value_type":null,"following_hours_labor_value":null,"following_hours_labor_value_type":null,"green_receipts_irs_tax":null,"id":null,"international_daily_value_of_subsistence":null,"lunch_subsidy_amount":null,"lunch_subsidy_automatic_calculation":true,"lunch_subsidy_payment_card_provider":null,"lunch_subsidy_payment_mechanism":null,"national_daily_value_of_subsistence":null,"night_labor_value":null,"night_labor_value_type":null,"payroll_enumerations_tax_office_id":null,"prevision_of_payment_day":null,"rest_days_labor_value":null,"rest_days_labor_value_type":null,"vacation_subsidy_independent_receipt":null,"vacation_subsidy_payment_month":null,"vacation_subsidy_twelfths":null,"value_per_kilometer":null,"value_per_kilometer_public_transportation":null,"working_days_per_week":null,"working_hours_per_week":null},"deduction_settings":[]};
+        $.current_company = {"accountant_id":1141,"accountant_tax_registration_number":"","accounting_activation_date":"2016-01-25","accounting_active":false,"accounting_deactivation_date":"2016-03-31","accounting_expiration_date":"2016-03-31","accounting_pack_size":"DESCONHECIDO","activate_accounting_export":false,"activated_at":"2019-06-24T00:00:00Z","activity_start":"2004-01-22","address_id":null,"allow_main_address_use":false,"allow_manager_full_access_to_payroll":false,"allow_negative_stock":true,"brand":"toconline","business_name":"Simple Pure - Est\u00e9tica Natural, Unipessoal Lda","cashed_vat_activated_at":null,"cashed_vat_active":false,"cashed_vat_deactivated_at":null,"cashed_vat_deactivation_reason":null,"cluster":2,"commercial_activation_date":"2019-06-24","commercial_active":true,"commercial_deactivation_date":null,"commercial_expiration_date":"2019-12-24","commercial_pack_size":"DESCONHECIDO","communicate_documents_via_webservice":false,"communicate_shipments_via_webservice":false,"company_accounting_type":1,"company_name":"Simple Pure - Est\u00e9tica Natural, Unipessoal Lda","company_registry_number":"","company_registry_office":"","company_type":"Sociedade Unipessoal por Quotas","constitution_date":"2004-01-22","created_at":"2016-01-25T10:15:16Z","currency_id":1,"deactivated_at":null,"email":"simplepure.spa@gmail.com","expired_at":"2019-12-24","extra_info":"","fax_number":"","id":54795,"imported_saft":false,"irs_activity_code":null,"is_active":true,"is_deleted":false,"is_demo":false,"is_free":false,"logo_content_type":null,"logo_file_name":null,"logo_file_size":null,"logo_updated_at":null,"main_address_decision":true,"observations":"","payroll_closing_month":null,"payroll_closing_year":null,"payroll_enumerations_ruas_activity_code_id":"T04-96022","payroll_show_profession":false,"permanent_certificate_code":"7825-8608-1625","phone_number":"961729847","pro_rata":null,"representative_tax_registration_number":"","schema_name":"pt506834298_c54795","shared_capital":"5000.0","social_security_number":"","tax_exemption_reason_id":null,"tax_registration_number":"506834298","transfered_at":null,"updated_at":"2019-09-19T09:43:44Z","uploaded_logo":false,"use_sharded_company":false,"vat_submission_frequency":3,"website":"","name":"Simple Pure - Est\u00e9tica Natural, Unipessoal Lda","currency":{"country_id":1,"created_at":"2012-12-21T17:17:35Z","id":1,"iso_code":"EUR","minor_unit":2,"pattern":"#,##0.00","symbol":"\u20ac","symbol_at_right":true,"updated_at":"2012-12-21T17:17:35Z"},"main_address":{"address_detail":"Avenida Nuno Alvares n\u00ba 27 Loja 1","addressable_id":54795,"addressable_type":"Company","city":"Castelo Branco","code":"1","country_id":1,"created_at":"2016-01-25T10:15:16Z","for_charge":false,"for_discharge":false,"id":2009076,"is_national_holidays_workday":false,"is_primary":true,"is_saturday_workday":false,"is_sunday_workday":false,"key":"main_address","name":"Sede","payroll_enumerations_tax_office_id":"604","payroll_ruas_local_unit_identifier":null,"postcode":"6000-083","region":null,"updated_at":"2019-06-24T15:25:46Z","country":{"created_at":"2012-12-21T17:17:22Z","default_name":"Portugal - Continente","id":1,"iso_alpha_2":"PT","iso_alpha_3":"PRT","tax_country_region":"PT","updated_at":"2012-12-21T17:17:22Z"}},"template_options":{"alternative_bank_account_id":null,"bank_account_id":null,"bottom_margin":28,"company_id":54795,"created_at":"2016-01-25T10:15:16Z","document_theme_id":6,"id":54290,"observations":"","render_banks_data":false,"sign_documents":false,"top_margin":28,"updated_at":"2019-06-26T10:24:43Z"},"payroll_data":{"christmas_subsidy_independent_receipt":"","christmas_subsidy_payment_month":"","christmas_subsidy_twelfths":"","created_at":"2016-01-25T10:15:21Z","entity_id":54795,"entity_type":"Company","first_hour_labor_value":null,"first_hour_labor_value_type":"","following_hours_labor_value":null,"following_hours_labor_value_type":"","green_receipts_irs_tax":null,"id":99739,"international_daily_value_of_subsistence":null,"lunch_subsidy_amount":null,"lunch_subsidy_automatic_calculation":true,"lunch_subsidy_payment_card_provider":"","lunch_subsidy_payment_mechanism":"","national_daily_value_of_subsistence":null,"night_labor_value":null,"night_labor_value_type":"","payroll_enumerations_tax_office_id":null,"prevision_of_payment_day":1,"rest_days_labor_value":null,"rest_days_labor_value_type":"","updated_at":"2019-06-24T15:25:46Z","vacation_subsidy_independent_receipt":"","vacation_subsidy_payment_month":"","vacation_subsidy_twelfths":"","value_per_kilometer":null,"value_per_kilometer_public_transportation":null,"working_days_per_week":null,"working_hours_per_week":null}};
+$.current_company.pending_notifications_ids = [];
+$.current_company.print_server_data_type = 'json';
+$.current_company.upload_url = 'https://fsopo.toconline.pt';
+
+      }
+
+      function setTaxes() {
+          $.taxes = {"PT_NOR":{"description":"Normal","id":1,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"23","vat_tax_id":1},"PT_INT":{"description":"Interm\u00e9dia","id":2,"tax_code":"INT","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"13","vat_tax_id":2},"PT_RED":{"description":"Reduzida","id":3,"tax_code":"RED","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"6","vat_tax_id":3},"PT_ISE":{"description":"Isenta","id":4,"tax_code":"ISE","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":4},"PT-MA_NOR":{"description":"Normal","id":5,"tax_code":"NOR","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"22","vat_tax_id":5},"PT-MA_INT":{"description":"Interm\u00e9dia","id":6,"tax_code":"INT","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"12","vat_tax_id":6},"PT-MA_RED":{"description":"Reduzida","id":7,"tax_code":"RED","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"5","vat_tax_id":7},"PT-MA_ISE":{"description":"Isenta","id":8,"tax_code":"ISE","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":8},"PT-AC_ISE":{"description":"Isenta","id":12,"tax_code":"ISE","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":9},"UE_NOR":{"description":"Normal","id":13,"tax_code":"NOR","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"23","vat_tax_id":10},"UE_INT":{"description":"Interm\u00e9dia","id":14,"tax_code":"INT","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"13","vat_tax_id":11},"UE_RED":{"description":"Reduzida","id":15,"tax_code":"RED","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"6","vat_tax_id":12},"UE_ISE":{"description":"Isenta","id":16,"tax_code":"ISE","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":13},"NON-UE_NOR":{"description":"Normal","id":17,"tax_code":"NOR","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"23","vat_tax_id":14},"NON-UE_INT":{"description":"Interm\u00e9dia","id":18,"tax_code":"INT","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"13","vat_tax_id":15},"NON-UE_RED":{"description":"Reduzida","id":19,"tax_code":"RED","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"6","vat_tax_id":16},"NON-UE_ISE":{"description":"Isenta","id":20,"tax_code":"ISE","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":17},"PT-AC_NOR":{"description":"Normal","id":66,"tax_code":"NOR","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"18","vat_tax_id":18},"PT-AC_INT":{"description":"Interm\u00e9dia","id":77,"tax_code":"INT","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"9","vat_tax_id":21},"PT-AC_RED":{"description":"Reduzida","id":78,"tax_code":"RED","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"4","vat_tax_id":22}};
+          $.all_taxes = [{"description":"Normal","id":21,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":"2010-12-31","tax_percentage":"21","vat_tax_id":null},{"description":"Normal","id":22,"tax_code":"NOR","tax_country_region":"PT-AC","tax_expiration_date":"2010-12-31","tax_percentage":"15","vat_tax_id":null},{"description":"Normal","id":23,"tax_code":"NOR","tax_country_region":"PT-MA","tax_expiration_date":"2010-12-31","tax_percentage":"15","vat_tax_id":null},{"description":"Interm\u00e9dia","id":24,"tax_code":"INT","tax_country_region":"PT-MA","tax_expiration_date":"2010-12-31","tax_percentage":"9","vat_tax_id":null},{"description":"Reduzida","id":25,"tax_code":"RED","tax_country_region":"PT-MA","tax_expiration_date":"2010-12-31","tax_percentage":"4","vat_tax_id":null},{"description":"Normal","id":26,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":"2010-06-30","tax_percentage":"20","vat_tax_id":null},{"description":"Interm\u00e9dia","id":27,"tax_code":"INT","tax_country_region":"PT","tax_expiration_date":"2010-06-30","tax_percentage":"12","vat_tax_id":null},{"description":"Reduzida","id":28,"tax_code":"RED","tax_country_region":"PT","tax_expiration_date":"2010-06-30","tax_percentage":"5","vat_tax_id":null},{"description":"Normal","id":29,"tax_code":"NOR","tax_country_region":"PT-AC","tax_expiration_date":"2010-06-30","tax_percentage":"14","vat_tax_id":null},{"description":"Interm\u00e9dia","id":30,"tax_code":"INT","tax_country_region":"PT-AC","tax_expiration_date":"2010-06-30","tax_percentage":"8","vat_tax_id":null},{"description":"Normal","id":31,"tax_code":"NOR","tax_country_region":"PT-MA","tax_expiration_date":"2010-06-30","tax_percentage":"14","vat_tax_id":null},{"description":"Interm\u00e9dia","id":32,"tax_code":"INT","tax_country_region":"PT-MA","tax_expiration_date":"2010-06-30","tax_percentage":"8","vat_tax_id":null},{"description":"Normal","id":33,"tax_code":"NOR","tax_country_region":"PT-MA","tax_expiration_date":"2012-03-31","tax_percentage":"16","vat_tax_id":null},{"description":"Normal","id":9,"tax_code":"NOR","tax_country_region":"PT-AC","tax_expiration_date":"2013-12-31","tax_percentage":"16","vat_tax_id":null},{"description":"Interm\u00e9dia","id":10,"tax_code":"INT","tax_country_region":"PT-AC","tax_expiration_date":"2013-12-31","tax_percentage":"9","vat_tax_id":null},{"description":"Reduzida","id":11,"tax_code":"RED","tax_country_region":"PT-AC","tax_expiration_date":"2013-12-31","tax_percentage":"4","vat_tax_id":null},{"description":"Normal","id":71,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":"2002-06-04","tax_percentage":"17","vat_tax_id":null},{"description":"Normal","id":72,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":"2005-06-30","tax_percentage":"19","vat_tax_id":null},{"description":"Normal","id":75,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":"2002-06-04","tax_percentage":"17","vat_tax_id":null},{"description":"Normal","id":76,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":"2005-06-30","tax_percentage":"19","vat_tax_id":null},{"description":"Normal","id":1,"tax_code":"NOR","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"23","vat_tax_id":1},{"description":"Interm\u00e9dia","id":2,"tax_code":"INT","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"13","vat_tax_id":2},{"description":"Reduzida","id":3,"tax_code":"RED","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"6","vat_tax_id":3},{"description":"Isenta","id":4,"tax_code":"ISE","tax_country_region":"PT","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":4},{"description":"Normal","id":5,"tax_code":"NOR","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"22","vat_tax_id":5},{"description":"Interm\u00e9dia","id":6,"tax_code":"INT","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"12","vat_tax_id":6},{"description":"Reduzida","id":7,"tax_code":"RED","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"5","vat_tax_id":7},{"description":"Isenta","id":8,"tax_code":"ISE","tax_country_region":"PT-MA","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":8},{"description":"Isenta","id":12,"tax_code":"ISE","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":9},{"description":"Normal","id":13,"tax_code":"NOR","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"23","vat_tax_id":10},{"description":"Interm\u00e9dia","id":14,"tax_code":"INT","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"13","vat_tax_id":11},{"description":"Reduzida","id":15,"tax_code":"RED","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"6","vat_tax_id":12},{"description":"Isenta","id":16,"tax_code":"ISE","tax_country_region":"UE","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":13},{"description":"Normal","id":17,"tax_code":"NOR","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"23","vat_tax_id":14},{"description":"Interm\u00e9dia","id":18,"tax_code":"INT","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"13","vat_tax_id":15},{"description":"Reduzida","id":19,"tax_code":"RED","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"6","vat_tax_id":16},{"description":"Isenta","id":20,"tax_code":"ISE","tax_country_region":"NON-UE","tax_expiration_date":null,"tax_percentage":"0","vat_tax_id":17},{"description":"Normal","id":66,"tax_code":"NOR","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"18","vat_tax_id":18},{"description":"Interm\u00e9dia","id":77,"tax_code":"INT","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"9","vat_tax_id":21},{"description":"Reduzida","id":78,"tax_code":"RED","tax_country_region":"PT-AC","tax_expiration_date":null,"tax_percentage":"4","vat_tax_id":22},{"description":"Interm\u00e9dia","id":67,"tax_code":"INT","tax_country_region":"PT-AC","tax_expiration_date":"2015-06-30","tax_percentage":"10","vat_tax_id":19},{"description":"Reduzida","id":68,"tax_code":"RED","tax_country_region":"PT-AC","tax_expiration_date":"2015-06-30","tax_percentage":"5","vat_tax_id":20}];
+      }
+
+      function createDynamicServices() {
+        $.app.document_types = new DocumentTypes([{"always_show_as_root":true,"area":"FT","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"FT","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"invoice","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Fatura","value":"FT"},{"always_show_as_root":true,"area":"FT","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"FR","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"invoice_receipt","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Fatura-recibo","value":"FR"},{"always_show_as_root":true,"area":"FT","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"FS","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"simplified_invoice","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Fatura simplificada","value":"FS"},{"always_show_as_root":true,"area":"FT","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"VCF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"daily_summary","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":false,"description":"Vendas ao consumidor final","value":"VCF"},{"always_show_as_root":true,"area":"ID","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"SI","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"initial_balances","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Saldos iniciais","value":"SI"},{"always_show_as_root":true,"area":"RC","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"RC","increase_related":false,"increases_stock":false,"is_root":false,"multiple_document_series":true,"name":"payment","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Recibo","value":"RC"},{"always_show_as_root":true,"area":"GR","associated_module":"sales","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"GR","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"shipment","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Guia de remessa","value":"GR"},{"always_show_as_root":true,"area":"GR","associated_module":"sales","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"GT","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"transport","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Guia de transporte","value":"GT"},{"always_show_as_root":true,"area":"GR","associated_module":"sales","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"GA","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"own_assets","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Guia de movimenta\u00e7\u00e3o de ativos pr\u00f3prios","value":"GA"},{"always_show_as_root":true,"area":"GR","associated_module":"sales","can_be_for_own_company":true,"can_be_shipment_document":true,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"GD","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":true,"name":"return","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Guia de devolu\u00e7\u00e3o","value":"GD"},{"always_show_as_root":true,"area":"OR","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"OR","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"quote","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Or\u00e7amento","value":"OR"},{"always_show_as_root":true,"area":"OR","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"FP","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"invoice_quote","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Fatura pr\u00f3-forma","value":"FP"},{"always_show_as_root":true,"area":"NEF","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"NEF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"purchase_order","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Nota de encomenda a fornecedor","value":"NEF"},{"always_show_as_root":true,"area":"NEF","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"FPF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"purchase_pro_forma_invoice","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Fatura pr\u00f3-forma de fornecedor","value":"FPF"},{"always_show_as_root":true,"area":"FC","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"FC","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":true,"name":"purchase_invoice","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Fatura de compra","value":"FC"},{"always_show_as_root":false,"area":"IDF","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":true,"decrease_related":false,"decreases_stock":false,"id":"NLCF","increase_related":true,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"purchase_credit_adjustment_document","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Nota de lan\u00e7amento a cr\u00e9dito de fornecedor","value":"NLCF"},{"always_show_as_root":true,"area":"FCA","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"FCA","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":true,"name":"purchase_auto_billing_invoice","supports_cashed_vat":true,"supports_description":false,"supports_new_by_user":true,"description":"Fatura de autofatura\u00e7\u00e3o","value":"FCA"},{"always_show_as_root":true,"area":"IDF","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"SIF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"purchase_initial_balances","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Saldos iniciais de fornecedor","value":"SIF"},{"always_show_as_root":true,"area":"SHI","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"SHI","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"scheduled_invoice","supports_cashed_vat":false,"supports_description":false,"supports_new_by_user":true,"description":"translation missing: pt.document_types.descriptions.sales.scheduled_invoice","value":"SHI"},{"always_show_as_root":true,"area":"GTF","associated_module":"purchases","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"GTF","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":true,"name":"purchase_transport","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Guia de transporte de fornecedor","value":"GTF"},{"always_show_as_root":true,"area":"GTF","associated_module":"purchases","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"GDF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"purchase_return","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Guia de devolu\u00e7\u00e3o a fornecedor","value":"GDF"},{"always_show_as_root":true,"area":"PF","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"PF","increase_related":false,"increases_stock":false,"is_root":false,"multiple_document_series":true,"name":"purchase_payment_document","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Pagamento a fornecedor","value":"PF"},{"always_show_as_root":true,"area":"I","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"I","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"inventory","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Acerto de quantidade","value":"I"},{"always_show_as_root":true,"area":"I","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"II","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"initial_inventory","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":false,"description":"translation missing: pt.document_types.descriptions.stocks.initial_inventory","value":"II"},{"always_show_as_root":true,"area":"MST","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"MST","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":false,"name":"temporary_adjustment","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":false,"description":"Ajuste tempor\u00e1rio","value":"MST"},{"always_show_as_root":true,"area":"MS","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"MS","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":false,"name":"permanent_adjustment","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":false,"description":"Ajuste permanente","value":"MS"},{"always_show_as_root":true,"area":"I","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"R","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"reset","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Defini\u00e7\u00e3o de stock","value":"R"},{"always_show_as_root":true,"area":"I","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"RI","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"internal_reset","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":false,"description":"translation missing: pt.document_types.descriptions.stocks.internal_reset","value":"RI"},{"always_show_as_root":true,"area":"GR","associated_module":"sales","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"GC","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"consignation","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Guia de consigna\u00e7\u00e3o","value":"GC"},{"always_show_as_root":true,"area":"I","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"IF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"final_inventory","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":false,"description":"translation missing: pt.document_types.descriptions.stocks.final_inventory","value":"IF"},{"always_show_as_root":false,"area":"IDF","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":true,"decrease_related":true,"decreases_stock":false,"id":"NLDF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"purchase_debit_adjustment_document","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Nota de lan\u00e7amento a d\u00e9bito de fornecedor","value":"NLDF"},{"always_show_as_root":true,"area":"FC","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":false,"id":"DSP","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":true,"name":"purchase_expense","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Despesas","value":"DSP"},{"always_show_as_root":false,"area":"ID","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":true,"decrease_related":false,"decreases_stock":false,"id":"NLD","increase_related":true,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"debit_adjustment_document","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Nota de lan\u00e7amento a d\u00e9bito","value":"NLD"},{"always_show_as_root":false,"area":"ID","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":false,"controls_related":true,"decrease_related":true,"decreases_stock":false,"id":"NLC","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"credit_adjustment_document","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Nota de lan\u00e7amento a cr\u00e9dito","value":"NLC"},{"always_show_as_root":false,"area":"FT","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":true,"decrease_related":false,"decreases_stock":true,"id":"ND","increase_related":true,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"debit_note","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Nota de d\u00e9bito","value":"ND"},{"always_show_as_root":false,"area":"FT","associated_module":"sales","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":true,"decrease_related":true,"decreases_stock":false,"id":"NC","increase_related":false,"increases_stock":true,"is_root":true,"multiple_document_series":true,"name":"credit_note","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Nota de cr\u00e9dito","value":"NC"},{"always_show_as_root":false,"area":"FC","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":true,"decrease_related":true,"decreases_stock":true,"id":"NCF","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":true,"name":"purchase_credit_note","supports_cashed_vat":true,"supports_description":true,"supports_new_by_user":true,"description":"Nota de cr\u00e9dito de fornecedor","value":"NCF"},{"always_show_as_root":false,"area":"FC","associated_module":"purchases","can_be_for_own_company":false,"can_be_shipment_document":true,"controls_related":true,"decrease_related":false,"decreases_stock":false,"id":"NDF","increase_related":true,"increases_stock":true,"is_root":true,"multiple_document_series":true,"name":"purchase_debit_note","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":true,"description":"Nota de d\u00e9bito de fornecedor","value":"NDF"},{"always_show_as_root":true,"area":"CI","associated_module":"stocks","can_be_for_own_company":true,"can_be_shipment_document":false,"controls_related":false,"decrease_related":false,"decreases_stock":true,"id":"CI","increase_related":false,"increases_stock":false,"is_root":true,"multiple_document_series":false,"name":"internal_consumption","supports_cashed_vat":false,"supports_description":true,"supports_new_by_user":false,"description":"translation missing: pt.document_types.descriptions.stocks.internal_consumption","value":"CI"}]);
+        $.app.socket_manager = new SocketManager({"port":3001,"root":"epaper","host":"app2.toconline.pt"});
+      }
+
+      function inlineJavascript() {
+            var __view_support_data = {
+    model_name: null,
+    data_sources: {
+      
+    },
+    parameters: {"version":"201909270908","page":1},
+    sub_controllers: {"customer":{"controller":"Filter","view_resource":{"accounting_number":null,"business_name":null,"cashed_vat":false,"company_id":null,"contact_name":null,"country_iso_alpha_2":null,"created_at":null,"email":null,"general_ledger_id":null,"id":null,"internal_observations":null,"is_deleted":false,"is_tax_exempt":null,"mb_entity":null,"mb_id":null,"mobile_number":null,"not_final_customer":false,"observations":null,"phone_number":null,"saft_import_id":null,"tax_country_region":"PT","tax_exemption_reason_id":null,"tax_registration_number":null,"updated_at":null,"use_address_as_delivery_address":null,"website":null,"cc_email":"","address":{"address_detail":null,"addressable_id":null,"addressable_type":null,"city":null,"code":null,"country_id":1,"created_at":null,"for_charge":false,"for_discharge":false,"id":null,"is_national_holidays_workday":false,"is_primary":true,"is_saturday_workday":false,"is_sunday_workday":false,"key":"address","name":"Sede","payroll_enumerations_tax_office_id":null,"payroll_ruas_local_unit_identifier":null,"postcode":null,"region":null,"updated_at":null,"errors":{},"is_destroyed":null,"country":{"created_at":"2012-12-21T17:17:22Z","default_name":"Portugal - Continente","id":1,"iso_alpha_2":"PT","iso_alpha_3":"PRT","tax_country_region":"PT","updated_at":"2012-12-21T17:17:22Z"}},"ship_to_address":{"address_detail":null,"addressable_id":null,"addressable_type":null,"city":null,"code":null,"country_id":1,"created_at":null,"for_charge":false,"for_discharge":false,"id":null,"is_national_holidays_workday":false,"is_primary":true,"is_saturday_workday":false,"is_sunday_workday":false,"key":"address","name":"Sede","payroll_enumerations_tax_office_id":null,"payroll_ruas_local_unit_identifier":null,"postcode":null,"region":null,"updated_at":null,"errors":{},"is_destroyed":null,"country":{"created_at":"2012-12-21T17:17:22Z","default_name":"Portugal - Continente","id":1,"iso_alpha_2":"PT","iso_alpha_3":"PRT","tax_country_region":"PT","updated_at":"2012-12-21T17:17:22Z"}},"addresses":[{"address_detail":null,"addressable_id":null,"addressable_type":null,"city":null,"code":null,"country_id":1,"created_at":null,"for_charge":false,"for_discharge":false,"id":null,"is_national_holidays_workday":false,"is_primary":true,"is_saturday_workday":false,"is_sunday_workday":false,"key":"address","name":"Sede","payroll_enumerations_tax_office_id":null,"payroll_ruas_local_unit_identifier":null,"postcode":null,"region":null,"updated_at":null,"errors":{},"is_destroyed":null,"country":{"created_at":"2012-12-21T17:17:22Z","default_name":"Portugal - Continente","id":1,"iso_alpha_2":"PT","iso_alpha_3":"PRT","tax_country_region":"PT","updated_at":"2012-12-21T17:17:22Z"}}],"email_addresses":[],"defaults":{"apply_retention_to":"NA","bank_account_id":null,"cash_account_id":null,"currency_iso_code":null,"customer_id":null,"direct_debit":false,"direct_debit_bank_account_id":null,"direct_debit_customer_account":null,"direct_debit_customer_code":null,"direct_debit_customer_date":null,"direct_debit_document_series_id":null,"document_theme_id":null,"due_days":null,"gobal_settlement_percentage_formula":null,"id":null,"line_settlement_percentage_formula":null,"payment_mechanism":null,"payment_reference":null,"retention_type":null,"retention_value":null,"sales_price":null,"retention_and_application_type":""}},"support_data":{"model_name":"customer","model":"customer","class":"Customer","support_data":{"data_sources":{}}}}},
+    grids: []
+  };
+    __view_support_data.grids.push({
+      data: {"id":"grid","resource_id":"view_items.view.my_company/customers.index.grid","active":true,"height":"nil","columns":[{"title":"NIF","field":"tax_registration_number","model":"tax_registration_number","type":"string","template":"<a\n  id=\"\"\n    href=\"/rus/my_company/customers/#=id#/edit\"\n    \n    data-remote=\"true\"\n    \n    \n    \n    \n    \n  \n  \n  \n  \n  \n>\n  <span\n    class=\"link-text\"\n    \n  >\n    #if (tax_registration_number) {#\n  #= tax_registration_number #\n#}#\n\n  </span>\n</a>","sortable":true,"format":"","encoded":false,"hidden":false,"width":"125px","attributes":{"class":" wrap"},"headerAttributes":{"class":" wrap"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":"NIF: #=value#","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":"Nome","field":"business_name","model":"business_name","type":"string","template":"#if (business_name) {#\n  #= business_name #\n#}#\n#if (direct_debit) {#\n  <span class='label label-success' title='D\u00e9bito direto' rel='tooltip'>DD</span>\n#}#\n","sortable":true,"format":"","encoded":false,"hidden":false,"width":"353px","attributes":{"class":" wrap"},"headerAttributes":{"class":" wrap"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":"Nome: #if (value) {#\n  #= value #\n#}#\n#if (direct_debit) {#\n  <span class='label label-success' title='D\u00e9bito direto' rel='tooltip'>DD</span>\n#}#\n","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":"Sub-conta","field":"accounting_number","model":"accounting_number","type":"string","template":null,"sortable":true,"format":"","encoded":false,"hidden":false,"width":"59px","attributes":{"class":" wrap"},"headerAttributes":{"class":" wrap"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":"Sub-conta: #=value#","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":"S.P.","field":"not_final_customer","model":"not_final_customer","type":"string","template":"#if (not_final_customer) {#\n  <i class=\"icon-ok gray\"></i>\n#}#\n","sortable":true,"format":"","encoded":false,"hidden":false,"width":"59px","attributes":{"class":" wrap"},"headerAttributes":{"class":" wrap"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":"S.P.: #if (value) {#\n  <i class=\"icon-ok gray\"></i>\n#}#\n","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":"RIC","field":"cashed_vat","model":"cashed_vat","type":"string","template":"#if (cashed_vat) {#\n  <i class=\"icon-ok gray\"></i>\n#}#\n","sortable":true,"format":"","encoded":false,"hidden":false,"width":"59px","attributes":{"class":" wrap"},"headerAttributes":{"class":" wrap"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":"RIC: #if (value) {#\n  <i class=\"icon-ok gray\"></i>\n#}#\n","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":null,"field":"can_delete_customer","model":"can_delete_customer","type":"string","template":null,"sortable":true,"format":"","encoded":false,"hidden":true,"width":0,"attributes":{"class":"field-can-delete-customer"},"headerAttributes":{"class":"field-can-delete-customer"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":": #=value#","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":"Observa\u00e7\u00f5es para documento","field":"observations","model":"observations","type":"string","template":null,"sortable":true,"format":"","encoded":false,"hidden":true,"width":0,"attributes":{"class":"field-observations"},"headerAttributes":{"class":"field-observations"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":"Observa\u00e7\u00f5es para documento: #=value#","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":null,"field":"direct_debit","model":"direct_debit","type":"string","template":null,"sortable":true,"format":"","encoded":false,"hidden":true,"width":0,"attributes":{"class":"field-direct-debit"},"headerAttributes":{"class":"field-direct-debit"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":": #=value#","groupFooterTemplate":"","filterable":true,"database_fields":null},{"title":"&nbsp;","field":null,"model":"context_menu","type":"string","template":"        <span class=\"pull-right\">\n          <span class=\"btn btn-gray dropdown-toggle context-menu-target\" data-toggle=\"dropdown\">\n            <i class=\"icon-chevron-down\"></i>\n          </span>\n          <ul class=\"context-menu-wrapper\"># if (show_menu) { #<li ><a\n  id=\"edit_customer\"\n    href=\"/rus/my_company/customers/#=id#/edit\"\n    \n    data-remote=\"true\"\n    \n    \n    \n    \n    \n  \n  \n  \n  \n  \n>\n    <i class=\"icon icon-pencil\"></i>&nbsp;\n  <span\n    class=\"link-text\"\n    \n  >\n    Editar cliente\n  </span>\n</a></li># } ## if (show_menu && can_delete_customer) { #<li ><a\n  id=\"delete_customer\"\n    href=\"/rus/my_company/customers/#=id#\"\n    \n    data-remote=\"true\"\n    data-type=\"JSON\"\n    data-method=\"delete\"\n    data-confirm=\"De certeza que deseja remover o cliente #=business_name#?\"\n    \n    \n  \n  \n  \n  \n  \n>\n    <i class=\"icon icon-remove\"></i>&nbsp;\n  <span\n    class=\"link-text\"\n    \n  >\n    Remover cliente\n  </span>\n</a></li># } ## if (show_menu && can_create_initial_balance) { #<li ><a\n  id=\"initial_balance\"\n    href=\"/rus/billing/invoices/new?customer_id=#=id#&document_type=SI\"\n    \n    data-remote=\"true\"\n    \n    \n    \n    \n    \n  \n  \n  \n  \n  \n>\n  <span\n    class=\"link-text\"\n    \n  >\n    Criar registo de saldos iniciais para este cliente\n  </span>\n</a></li># } ## if (show_menu && can_issue_due_document && is_ie_or_chrome) { #<li ><a\n  id=\"print_due_notice\"\n    href=\"/rus/my_company/customers/pending_documents/print_due/#=id#\"\n    \n    data-remote=\"true\"\n    \n    \n    \n    \n    \n  \n  \n  \n  role=\"download print\"\n  \n>\n    <i class=\"icon icon-print\"></i>&nbsp;\n  <span\n    class=\"link-text\"\n    \n  >\n    Aviso de vencimento\n  </span>\n</a></li># } ## if (show_menu && can_issue_due_document && !is_ie_or_chrome) { #<li ><a\n  id=\"download_due_notice\"\n    href=\"/rus/my_company/customers/pending_documents/download_due/#=id#\"\n    \n    data-remote=\"true\"\n    \n    \n    \n    \n    \n  \n  \n  role=\"download\"\n  \n  \n>\n    <i class=\"icon icon-print\"></i>&nbsp;\n  <span\n    class=\"link-text\"\n    \n  >\n    Aviso de vencimento\n  </span>\n</a></li># } ## if (show_menu && can_issue_due_document) { #<li ><a\n  id=\"send_due_notice\"\n    href=\"/rus/my_company/customers/#=id#/email_due\"\n    \n    data-remote=\"true\"\n    \n    \n    \n    \n    \n  \n  \n  \n  \n  \n>\n    <i class=\"icon icon-envelope\"></i>&nbsp;\n  <span\n    class=\"link-text\"\n    \n  >\n    Aviso de vencimento\n  </span>\n</a></li># } #</ul>\n        </span>\n","sortable":false,"format":"","encoded":false,"hidden":false,"width":40,"attributes":{"class":"context-menu-column"},"headerAttributes":{"class":"context-menu-column"},"headerTemplate":null,"footerTemplate":"","groupHeaderTemplate":"&nbsp;: #=value#","groupFooterTemplate":"","filterable":false,"database_fields":null}],"search_columns":[{"name":"observations","type":"string"},{"name":"business_name","type":"string"},{"name":"tax_registration_number","type":"string"},{"name":"accounting_number","type":"string"}],"data":null,"aggr":[],"url":"/rus/my_company/customers","urls":{"edit_customer":{"url":"/rus/my_company/customers/#=id#/edit","method":null,"toggle":null,"remote":true,"confirm":null,"onclick":null},"delete_customer":{"url":"/rus/my_company/customers/#=id#","method":"delete","toggle":null,"remote":true,"confirm":"De certeza que deseja remover o cliente #=business_name#?","onclick":null},"initial_balance":{"url":"/rus/billing/invoices/new?customer_id=#=id#&document_type=SI","method":null,"toggle":null,"remote":true,"confirm":null,"onclick":null},"print_due_notice":{"url":"/rus/my_company/customers/pending_documents/print_due/#=id#","method":null,"toggle":null,"remote":"true","confirm":null,"onclick":null},"download_due_notice":{"url":"/rus/my_company/customers/pending_documents/download_due/#=id#","method":null,"toggle":null,"remote":"true","confirm":null,"onclick":null},"send_due_notice":{"url":"/rus/my_company/customers/#=id#/email_due","method":null,"toggle":null,"remote":true,"confirm":null,"onclick":null}},"sortable":true,"scrollable":true,"groupable":false,"filterable":false,"reorderable":false,"adjustable":false,"navigatable":false,"resizable":false,"columnMenu":false,"filter_form_event_name":"UpdateFilters","auto_hide_after_group":true,"model":"Customer","model_name":"customer","selectable":false,"group":[],"sort":[{"dir":"asc","field":"business_name"}],"filters":{"login":"AND","filters":[]},"id_column":"id","id_column_filter_operator":"eq","always_show_collapsed":false,"pageable":true,"button_count":10,"page_size":20,"page_sizes":[5,10,20],"show_summary":false,"row_limit":null,"delayed":true,"checkable":false,"details":[],"detail":null,"show_header":true,"show_footer":false,"has_context_menu":true,"grid_model":"GridModel","empty_data":"<div class=\"empty-icon\"><i class='cldware_icon cldware_icon-empty-data'></i></div>\n<div class=\"empty-text\">Ainda n\u00e3o registou nenhum cliente.</div>\n<div class=\"empty-button\"></div>\n","filtered_empty_data":"<div class=\"empty-icon\"><i class='cldware_icon cldware_icon-empty-data'></i></div>\n<div class=\"empty-text\">N\u00e3o existem clientes para visualizar com os filtros seleccionados</div>\n<div class=\"empty-button\"></div>\n","default_events":true,"row_template":null,"row_templates":null,"has_detail":false,"details_templates":null,"auto_expand":false,"drag_and_drop":false,"row":null},
+      authenticity_token: "6pYDFZxVPz9fPCyKIkM32Jy18pdzg4O+hGofC/iqc5A=",
+      parameters: null,
+      header_properties: {"authenticity_token":"X-GRID-REQUEST-AUTHENTICITY-TOKEN","top":"X-GRID-REQUEST-TOP","skip":"X-GRID-REQUEST-SKIP","page":"X-GRID-REQUEST-PAGE","pageSize":"X-GRID-REQUEST-PAGESIZE","sort":"X-GRID-REQUEST-SORT","group":"X-GRID-REQUEST-GROUP","aggregate":"X-GRID-REQUEST-AGGREGATE","filter":"X-GRID-REQUEST-FILTER","row_limit":"X-GRID-REQUEST-ROW-LIMIT","info":"X-GRID-REQUEST-INFO","search":"X-GRID-REQUEST-SEARCH"},
+      controller: 'GridModel'
+    });
+    var view_model =  ViewModelFactory.generate(
+      "",
+      "", {
+        support_data: __view_support_data
+      }
+    );
+
+    $('#my_company_customers_index').bindForm(undefined, { viewModel: view_model });
+
+
+
+        
+
+      }
+      function unavailableUrl() { return 'https://app2.toconline.pt/rus/unavailable'; }
+
+      I18n.defaultLocale = "pt";
+      I18n.locale = "pt";
+
+      var dismiss_message = function(){
+        $('.help-guides').find('[data-dismiss="modal"]').off('click.dismiss.modal').on('click.dismiss.modal', function(event) {
+
+          if ($('.help-guides').find('[id="hide_message"]')[0].checked) {
+            $.ajax({
+              url: "/rus/users/preferences",
+              data: { preferences: [{"company_modules.general_help_alert": true}] },
+              type: "PUT"
+            });
+          }
+
+          $.modal.close();
+          event.preventDefault();
+          event.stopPropagation();
+        });
+      }
+
+      $(document).ready(function() {
+        var cookies = document.querySelector('.cookies-eu-link');
+        if (cookies !== undefined && cookies !== null) {
+          cookies.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            window.hydra_app().showWizard({tag_name: 'toconline-cookies'});
+          });
+        }
+      });
+
+    </script>
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga("create","UA-42637244-1","auto");
+ga("send","pageview");
+</script>
+
+  </head>
+  <body id="toconline" class="chrome customers-list desktop billing_app hydra">
+
+    <div class="global-container">
+      <div id="main" role="main">
+        <div class="container">
+
+        <div class="row-fluid" id="section-content">
+              
+<div class="core-view" id="my_company_customers_index"><div class="span12"><div class="row-fluid"><div class="span12"><div class="row-fluid section-content"><div class="span12"><div id="actual-content">
+<div class="row-fluid ">
+    <div class="span12 blank portlet">
+
+      <div class="row-fluid">
+    <div class="span12 blank portlet">
+        <div class="list-toolbar">
+            <div class="btn-toolbar main-toolbar ">
+              <div>
+  <a class="btn-create btn btn-auto-width  " data-placement="top" data-remote="true" href="/rus/my_company/customers/new" id="new_customer" rel="tooltip" title="" data-original-title="Criar novo cliente"><i class="icon icon-plus"></i>
+Criar novo cliente</a>
+</div>
+            </div>
+        </div>
+
+      
+    </div>
+
+</div>
+    </div>
+
+</div>
+
+<div class="row-fluid ">
+    <div class="span12 blank portlet">
+
+      <div class="row-fluid">
+    <div class="span9 blank floated-sibling portlet">
+
+      <div class="row-fluid">  <div id="grid_div" class="span12 blue table-responsive grid-no-footer core-views-grid grid-no-detail" style="">
+    <div class="k-grid k-widget grid-no-footer" style=""><div class="k-grid-header" style="padding-right: 17px;"><div class="k-grid-header-wrap k-auto-scrollable"><table role="grid"><colgroup><col style="width:125px"><col style="width:353px"><col style="width:59px"><col style="width:59px"><col style="width:59px"><col style="width:40px"></colgroup><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader" data-field="tax_registration_number" rowspan="1" data-title="NIF" data-index="0" id="ff9bd985-76ba-499f-adaa-74f968579511" class="wrap k-header" data-role="columnsorter"><a class="k-link" href="#">NIF</a></th><th scope="col" role="columnheader" data-field="business_name" rowspan="1" data-title="Nome" data-index="1" id="8c1501d8-a791-4205-aa41-3ebe93eeea98" class="wrap k-header" data-role="columnsorter" data-dir="asc" aria-sort="ascending"><a class="k-link" href="#">Nome<span class="k-icon k-i-arrow-n"></span></a></th><th scope="col" role="columnheader" data-field="accounting_number" rowspan="1" data-title="Sub-conta" data-index="2" id="cdc7b9a8-9bf4-4fd4-b813-3c3d33a15130" class="wrap k-header" data-role="columnsorter"><a class="k-link" href="#">Sub-conta</a></th><th scope="col" role="columnheader" data-field="not_final_customer" rowspan="1" data-title="S.P." data-index="3" id="39697053-9466-4ec8-a087-ab4ac4981847" class="wrap k-header" data-role="columnsorter"><a class="k-link" href="#">S.P.</a></th><th scope="col" role="columnheader" data-field="cashed_vat" rowspan="1" data-title="RIC" data-index="4" id="d387725b-1da1-4fd7-b1a8-54cdd1eddb40" class="wrap k-header" data-role="columnsorter"><a class="k-link" href="#">RIC</a></th><th scope="col" role="columnheader" data-field="can_delete_customer" rowspan="1" data-index="5" id="8aef9910-8508-42e4-83b0-957ca1b7d0ee" class="field-can-delete-customer k-header" style="display:none" data-role="columnsorter"><a class="k-link" href="#">can_delete_customer</a></th><th scope="col" role="columnheader" data-field="observations" rowspan="1" data-title="Observações para documento" data-index="6" id="c40ff26d-2610-47a5-91b6-8ca463e03499" class="field-observations k-header" style="display:none" data-role="columnsorter"><a class="k-link" href="#">Observações para documento</a></th><th scope="col" role="columnheader" data-field="direct_debit" rowspan="1" data-index="7" id="879ac768-9ab5-4036-bc37-f57a62b97d67" class="field-direct-debit k-header" style="display:none" data-role="columnsorter"><a class="k-link" href="#">direct_debit</a></th><th scope="col" role="columnheader" rowspan="1" data-title="&nbsp;" data-index="8" id="1e292a31-6c8d-474c-a98d-ebe1246ed69f" class="context-menu-column k-header">&nbsp;</th></tr></thead></table></div></div><div class="k-grid-content k-auto-scrollable"><table id="grid" data-source="/rus/my_company/customers" data-core-views-uid="9769b02f-4aff-4e58-9910-6d2a7898ee67" data-role="grid" role="grid" class="table table-condensed table-hover" style="height: auto; display: table;"><colgroup><col style="width:125px"><col style="width:353px"><col style="width:59px"><col style="width:59px"><col style="width:59px"><col style="width:40px"></colgroup><tbody role="rowgroup"><tr data-uid="45e8543e-a3c9-4338-af41-552f8dbe854c" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5336134/edit" data-remote="true">
+  <span class="link-text">
+    
+  163589054
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  ANA Mª MELO FAUSTINO COSTA
+
+
+</td><td class=" wrap" role="gridcell">7</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">true</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr class="k-alt" data-uid="9e2ee14f-6b19-470a-be39-20138ed25745" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5215748/edit" data-remote="true">
+  <span class="link-text">
+    
+  224018248
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  ANDREIA FILIPA RIBEIRO GALVÃO
+
+
+</td><td class=" wrap" role="gridcell">2</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell">DT NAS 25-09-1982</td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr data-uid="c69d021d-f7d5-412d-94ba-e5aca94e6851" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5214464/edit" data-remote="true">
+  <span class="link-text">
+    
+  202484483
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  ANDREIA ISABEL TEIXEIRA NUNES
+
+
+</td><td class=" wrap" role="gridcell">1</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell">Data de nascimento: 22/03/1990</td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr class="k-alt" data-uid="4fd8d839-eb01-4a10-8efa-2dc71afa110e" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5221165/edit" data-remote="true">
+  <span class="link-text">
+    
+  143542265
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  ANTÓNIO MANUEL PEREIRA
+
+
+</td><td class=" wrap" role="gridcell">5</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr data-uid="1c82fb3d-a15e-4fe6-8bba-8f2e8d7e11de" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5221423/edit" data-remote="true">
+  <span class="link-text">
+    
+  999999990
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  Consumidor Final
+
+
+</td><td class=" wrap" role="gridcell"></td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr class="k-alt" data-uid="c19e8383-35a6-42c4-bb9d-9e3c11f928b3" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5338592/edit" data-remote="true">
+  <span class="link-text">
+    
+  206143630
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  ELISABETE PEREIRA LEÃO
+
+
+</td><td class=" wrap" role="gridcell">10</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr data-uid="f098db5d-60cc-46f1-a7ae-d40c2de77916" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5336187/edit" data-remote="true">
+  <span class="link-text">
+    
+  235233382
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  JOANA INES DE BRITO
+
+
+</td><td class=" wrap" role="gridcell">8</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr class="k-alt" data-uid="30b279cf-d5fc-4276-9c45-7ded1d948582" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5216016/edit" data-remote="true">
+  <span class="link-text">
+    
+  139906517
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  Mª DA CONCEIÇÃO LOURINHO TEIXEIRA NUNES
+
+
+</td><td class=" wrap" role="gridcell">3</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">true</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr data-uid="caf3d8e7-53ba-4c34-b1a8-fb6db1f3c473" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5216711/edit" data-remote="true">
+  <span class="link-text">
+    
+  141807229
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  Mª GIL VALENTE
+
+
+</td><td class=" wrap" role="gridcell">4</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell">DAT DE NASC. 12-01-1948</td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr class="k-alt" data-uid="2e207524-29c4-43b3-91b0-4c254bc0eba9" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5337943/edit" data-remote="true">
+  <span class="link-text">
+    
+  236859854
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  MARCIA SOFIA FERNANDES RAPOSO ROQUE
+
+
+</td><td class=" wrap" role="gridcell">9</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr data-uid="2010c461-4b71-43e0-9312-4fe8b1490312" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5338949/edit" data-remote="true">
+  <span class="link-text">
+    
+  206576803
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  NUNO MANUEL QUERIDO MARICATO
+
+
+</td><td class=" wrap" role="gridcell">11</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr><tr class="k-alt" data-uid="9c9ff521-f91c-4793-8743-f22ca719b9f8" role="row"><td class=" wrap" role="gridcell"><a id="" href="/rus/my_company/customers/5221429/edit" data-remote="true">
+  <span class="link-text">
+    
+  229630464
+
+
+  </span>
+</a></td><td class=" wrap" role="gridcell">
+  SAUL MARQUES
+
+
+</td><td class=" wrap" role="gridcell">6</td><td class=" wrap" role="gridcell">
+</td><td class=" wrap" role="gridcell">
+</td><td class="field-can-delete-customer" style="display:none" role="gridcell">false</td><td class="field-observations" style="display:none" role="gridcell"></td><td class="field-direct-debit" style="display:none" role="gridcell">false</td><td class="context-menu-column" role="gridcell">        <span class="pull-right">
+          <span class="btn btn-gray dropdown-toggle context-menu-target" data-toggle="dropdown">
+            <i class="icon-chevron-down"></i>
+          </span>
+          
+        </span>
+</td></tr></tbody></table></div><div class="k-grid-footer" tabindex="-1" style="padding-right: 17px;"><div class="k-grid-footer-wrap"><table><colgroup><col style="width:125px"><col style="width:353px"><col style="width:59px"><col style="width:59px"><col style="width:59px"><col style="width:40px"></colgroup><tbody><tr class="k-footer-template"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="display:none">&nbsp;</td><td style="display:none">&nbsp;</td><td style="display:none">&nbsp;</td><td>&nbsp;</td></tr></tbody></table></div></div><div class="k-pager-wrap k-grid-pager k-widget k-floatwrap" data-role="pager"><span class="cloudware-core-pager-navigation" style="display: none;"><a href="#" title="" class="k-link k-pager-nav k-pager-first k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-w"></span></a><a href="#" title="" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-w"></span></a><ul class="k-pager-numbers k-reset"><li class="k-current-page"><span class="k-link k-pager-nav">1</span></li><li><span class="k-state-selected">1</span></li></ul><a href="#" title="" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-e"></span></a><a href="#" title="" class="k-link k-pager-nav k-pager-last k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-e"></span></a></span><span class="k-pager-info k-label">Registos 1 - 12 de 12 <span class="selected-items-count"></span></span></div></div>
+      <div class="empty-data grid-status">
+        <div class="center-vertical">
+          <div class="empty-icon"><i class="cldware_icon cldware_icon-empty-data"></i></div>
+<div class="empty-text">Ainda não registou nenhum cliente.</div>
+<div class="empty-button"></div>
+
+        </div>
+      </div>
+      <div class="filtered-empty-data grid-status">
+        <div class="center-vertical">
+          <div class="empty-icon"><i class="cldware_icon cldware_icon-empty-data"></i></div>
+<div class="empty-text">Não existem clientes para visualizar com os filtros seleccionados</div>
+<div class="empty-button"></div>
+
+          </div>
+      </div>
+    <div class="loading-data grid-status">
+      <div class="center-vertical">
+        <div class="loading-icon"><i class="fa fa-spinner fa-spin fa-4x"></i></div>
+        <div class="loading-text">A carregar a informação, por favor aguarde...</div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/x-kendo-template" id="template">
+  <table class="details"></table>
+</script>
+
+
+
+
+</div>
+    </div>
+
+
+    <div class="span3 sidebar portlet sidebar floated-sidebar" style="top: 0px;">
+      <div class="open-floated-sidebar">
+        <a href="" class="close"><i class="cldware_icon cldware_icon-more"></i></a>
+      </div>
+        <div class="filter-indicator" style="display: none;">
+          <a href="">
+            <span class="filter-icon"><i class="icon icon-filter"></i></span>
+            <span class="filter-working"><i class="icon icon-spinner icon-spin"></i></span>
+            <span class="filter-text">translation missing: pt.view_items.view.my_company/customers.index.clear_filters</span>
+            <span class="filter-clear-icon"><i class="icon icon-remove"></i></span>
+</a>        </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <div>
+            
+    <h4>Pesquisar</h4>
+
+  <form id="process_filters" name="process_filters" class="list-filter" role="form" novalidate="novalidate" action="/rus/my_company/customers" data-bind="with: customer" method="get" data-method="get" data-model-name="customer" data-authenticity-token="6pYDFZxVPz9fPCyKIkM32Jy18pdzg4O+hGofC/iqc5A=" data-external="{&quot;_use&quot;:true,&quot;_filters&quot;:{}}" data-controller="Filter" data-company-id="54795">
+    <div style="margin:0;padding:0;display:inline">
+      <input id="utf8" name="utf8" type="hidden" value="✓">
+        <input id="_method" name="_method" type="hidden" value="get">
+      <input id="authenticity_token" name="authenticity_token" type="hidden" value="6pYDFZxVPz9fPCyKIkM32Jy18pdzg4O+hGofC/iqc5A=">
+      <input id="_company_id" name="_company_id" type="hidden" value="54795">
+    </div>
+
+      <div class="search-new">
+        <div data-bind="visible: show_search" class="close-search" style="display: none;">
+          <div class="btn-group">
+            <a href="#" class="btn btn-link btn-link-dropdown" data-bind="click: clear_search">
+            </a>
+          </div>
+        </div>
+
+        <input class="span12  search-area" data-bind="event: { keydown: nextField, change: fieldChanged }, value: search_term" data-model="search_term" id="search_term_input" name="customer[search_term]" placeholder="Insira o texto de pesquisa" type="text">
+      </div>
+
+    <div id="filters_area" class="" style="padding-left: 5px; padding-rigth: 5px;">
+      
+    </div>
+  </form>
+
+
+  <!-- Unnecessary code since we don't have angular -->
+  <!--
+      document.addEventListener("", Reload, false);
+      function Reload(e) {
+        if (e.detail !== undefined) {
+          var scope = angular.element($("#process_filters")).scope();
+          scope.get(e.detail.id);
+        }
+      }
+  -->
+
+<div class="row-fluid"><div class="span12">
+  <div class="span12">
+    <h4>Clientes com mais vendas</h4>
+    <div id="top_customers_list">
+      <div>
+        <ol id="top_customers" class="gadget list">
+        <li>       <div>                           <a href="/rus/my_company/customers/5216711/edit" data-remote="true" class="title">Mª GIL VALENTE</a>                </div>       <div>                  <a class="subtitle">€ 100,19</a>                </div>       <div class="description"></div>     </li><li>       <div>                           <a href="/rus/my_company/customers/5336187/edit" data-remote="true" class="title">JOANA INES DE BRITO</a>                </div>       <div>                  <a class="subtitle">€ 29,50</a>                </div>       <div class="description"></div>     </li><li>       <div>                           <a href="/rus/my_company/customers/5337943/edit" data-remote="true" class="title">MARCIA SOFIA FERNANDES RAPOSO ROQUE</a>                </div>       <div>                  <a class="subtitle">€ 29,50</a>                </div>       <div class="description"></div>     </li><li>       <div>                           <a href="/rus/my_company/customers/5221423/edit" data-remote="true" class="title">Consumidor Final</a>                </div>       <div>                  <a class="subtitle">€ 25,15</a>                </div>       <div class="description"></div>     </li><li>       <div>                           <a href="/rus/my_company/customers/5338592/edit" data-remote="true" class="title">ELISABETE PEREIRA LEÃO</a>                </div>       <div>                  <a class="subtitle">€ 25,01</a>                </div>       <div class="description"></div>     </li></ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="ordered_list_item_template_extra" type="text/x-jquery-tmpl">
+    <li>
+      <div>
+        {{if status_class !== ''}}
+          <i class="fa fa-lg fa-${status_class}"></span>
+        {{/if}}
+        {{if title_url !== ''}}
+        <a href="${title_url}" data-remote="true" class="title">${title}</a>
+        {{else}}
+        <a class="title">${title}</a>
+        {{/if}}
+      </div>
+      <div>
+        {{if subtitle_url !== ''}}
+        <a href="${subtitle_url}" data-remote="true" class="subtitle">${subtitle}</a>
+        {{else}}
+        <a class="subtitle">${subtitle}</a>
+        {{/if}}
+      </div>
+      <div class="description">${description}</div>
+    </li>
+</script>
+
+<script type="text/javascript">
+  $.get('/rus/billing/gadgets/top_customers', function(items) {
+      $("#ordered_list_item_template_extra").tmpl(items).appendTo("#top_customers");
+    });
+</script>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+    </div>
+
+</div>
+</div></div></div></div></div></div></div>
+
+
+
+          </div>
+        </div> <!--! end of .container -->
+      </div> <!--! end of #main -->
+    </div>
+
+    <div class="alert_container_toc"></div>
+      <div class="cookies-eu js-cookies-eu">
+    <span class="cookies-eu-content-holder">O TOConline necessita de utilizar cookies para um correto funcionamento. Ao utilizar o nosso serviço estará a consentir a sua utilização.</span>
+    <span class="cookies-eu-button-holder">
+    <button class="cookies-eu-ok js-cookies-eu-ok"> Aceitar </button>
+      <a href="/visualizer.html?doc=cookies" class="cookies-eu-link" target="_blank"> Mais informações </a>
+    </span>
+  </div>
+
+  
+
+<ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5336134/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="delete_customer" href="/rus/my_company/customers/5336134" data-remote="true" data-type="JSON" data-method="delete" data-confirm="De certeza que deseja remover o cliente ANA Mª MELO FAUSTINO COSTA?" class="k-link">
+    <i class="icon icon-remove"></i>&nbsp;
+  <span class="link-text">
+    Remover cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5336134&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5336134" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5336134/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5215748/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5215748&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5215748" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5215748/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5214464/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5214464&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5214464" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5214464/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5221165/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5221165&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5221165" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5221165/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5221423/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5221423&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5338592/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5338592&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5338592" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5338592/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5336187/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5336187&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5336187" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5336187/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5216016/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="delete_customer" href="/rus/my_company/customers/5216016" data-remote="true" data-type="JSON" data-method="delete" data-confirm="De certeza que deseja remover o cliente Mª DA CONCEIÇÃO LOURINHO TEIXEIRA NUNES?" class="k-link">
+    <i class="icon icon-remove"></i>&nbsp;
+  <span class="link-text">
+    Remover cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5216016&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5216016" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5216016/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5216711/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5216711&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5216711" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5216711/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5337943/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5337943&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5337943" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5337943/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5338949/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5338949&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5338949" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5338949/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul><ul class="context-menu-wrapper k-widget k-reset k-header k-menu k-menu-vertical k-context-menu k-popup k-group" data-role="contextmenu" tabindex="0" role="menubar" style="display: none; position: absolute;"><li class="k-item k-state-default k-first" role="menuitem"><a id="edit_customer" href="/rus/my_company/customers/5221429/edit" data-remote="true" class="k-link">
+    <i class="icon icon-pencil"></i>&nbsp;
+  <span class="link-text">
+    Editar cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="initial_balance" href="/rus/billing/invoices/new?customer_id=5221429&amp;document_type=SI" data-remote="true" class="k-link">
+  <span class="link-text">
+    Criar registo de saldos iniciais para este cliente
+  </span>
+</a></li><li class="k-item k-state-default" role="menuitem"><a id="print_due_notice" href="/rus/my_company/customers/pending_documents/print_due/5221429" data-remote="true" role="download print" class="k-link">
+    <i class="icon icon-print"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li><li class="k-item k-state-default k-last" role="menuitem"><a id="send_due_notice" href="/rus/my_company/customers/5221429/email_due" data-remote="true" class="k-link">
+    <i class="icon icon-envelope"></i>&nbsp;
+  <span class="link-text">
+    Aviso de vencimento
+  </span>
+</a></li></ul></body></html>
